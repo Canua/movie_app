@@ -152,15 +152,44 @@ response 받은 데이터를 json으로 변환하고 console로 출력
 시나리오가 생기고 이를 관리할 수 있다.
 
 ○ Await, Async
+조건 : Async를 안쓰면 Await가 작동을 안한다.
 fetch를 callApi를 사용 해서 했다
 getMovies Async 함수이다.
+await를 사용해서 call api 작업이 완료되고 return를 한다
 
 _getMovies = async () => {
  const movies = await this._callApi()
  this.setState({
 	 movies
  })
-}
+}_
+
+포스터, 제목, 장르, 설명
+
+○ LinesEllipsis
+npm install --save react-lines-ellipsis
+site : https://www.npmjs.com/package/react-lines-ellipsis
+import LinesEllipsis from 'react-lines-ellipsis'
+
+<LinesEllipsis
+  text='long long text'
+  maxLine='3'
+  ellipsis='...'
+  trimRight
+  basedOn='letters'
+/>
+
+○ deploy
+github page : static file 공짜 호스틍
+1. 깃허브 계정
+2. 깃 허브 프로젝트
+3. 프로젝트 브런치
+gh-pages
+npm start
+yarn build - css 파일들 .min 압축
+yarn build 후 경고문구대로 하면 됨
+yarn run deploy (= npm run deploy)
+https://github.com/Canua/movie_app.git
 
 
 $git config --global user.name "Name명"
@@ -170,4 +199,4 @@ $git config --list
 
 
 
-https://www.youtube.com/watch?v=aJxQhwObD3s&list=PL7jH19IHhOLOFTVD4R8FeZWkwpVi8-9Fv&index=6
+https://www.youtube.com/watch?v=aJxQhwObD3s&list=PL7jH19IHhOLOFTVD4R8FeZWkwpVi8-9Fv
